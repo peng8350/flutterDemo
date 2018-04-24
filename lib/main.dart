@@ -1,5 +1,7 @@
+import 'package:fluterdemo/pages/TabPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import "pages/DialogPage.dart";
 import "pages/ListPage.dart";
 
@@ -18,7 +20,8 @@ class MyApp extends StatelessWidget {
       routes: {
         // register your activity
         "list": (BuildContext context) => new ListPage(),
-        "dialog": (BuildContext context) => new DialogPage()
+        "dialog": (BuildContext context) => new DialogPage(),
+        "tab": (BuildContext context) => new TabPage(),
       },
     );
   }
@@ -40,7 +43,8 @@ class MyHomePage extends StatelessWidget {
 
   final List dataList = const [
     {'title': "实现ListView添加删除更新操作", 'navigate': 'list'},
-    {'title': "对话框", 'navigate': 'dialog'}
+    {'title': "对话框", 'navigate': 'dialog'},
+    {'title': "Tab底部导航", 'navigate': 'tab'}
   ];
 
   Widget getView(BuildContext context, int index) =>
