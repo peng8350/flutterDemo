@@ -1,8 +1,11 @@
 import 'package:fluterdemo/pages/Page.dart';
 import 'package:fluterdemo/pages/SimplePage.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class TabPage extends StatefulWidget {
+
+
   @override
   _TabPageState createState() => new _TabPageState();
 }
@@ -10,6 +13,9 @@ class TabPage extends StatefulWidget {
 class _TabPageState extends State<TabPage> {
   List<SimplePage> list;
   int selectIndex = 0;
+
+
+
   BottomNavigationBarItem _renderBarItem(String url, String title) {
     return new BottomNavigationBarItem(
         icon: new Image.network(url,width: 24.0,height:24.0), title: new Text(title));
@@ -33,25 +39,28 @@ class _TabPageState extends State<TabPage> {
     list.add( new SimplePage(title:"页面4"));
   }
 
-  Widget _renderPage(int index){
-    return list[index];
+  Widget _renderPage(){
+    return list[this.selectIndex];
   }
 
   @override
   Widget build(BuildContext context) {
     return new Page(
-        title: "底部导航器的应用",
-        body: new CupertinoTabScaffold(
-            tabBar: new CupertinoTabBar(
-              currentIndex: 2,
-              items: getList(),
-              onTap: (int index) {
-                print(this.selectIndex);
-              },
-            ),
-            tabBuilder: (BuildContext context,int index){
-              return _renderPage(index);
-            }));
+      title:"底部导航",
+      bottom: new BottomNavigationBar(
+        currentIndex: this.selectIndex,
+        items: getList(),
+        onTap: (int index) {
+          this.setState((){
+            this.selectIndex = index;
+          });
+        },
+
+      ),
+      body: _renderPage()
+
+    );
+
   }
 
   @override

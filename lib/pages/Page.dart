@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 
 class Page extends StatelessWidget{
 
-  Widget body,right;
+  Widget body,right,bottom;
   String title;
 
-  Page({this.title,this.body,this.right});
+  Page({this.title,this.body,this.right,this.bottom});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,11 @@ class Page extends StatelessWidget{
         middle: new Text(title),
         trailing: this.right,
       ),
+
+      bottomNavigationBar: this.bottom,
       body: this.body,
+
+
 
     );
   }

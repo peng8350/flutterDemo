@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       color: const Color.fromARGB(255, 255, 255, 255),
       home: new MyHomePage(title: 'Demo'),
       theme: new ThemeData(
-        primaryColor: Colors.black,
+        primaryColor: Colors.blue,
+        accentColor: Colors.black,
       ),
       routes: {
         // register your activity
