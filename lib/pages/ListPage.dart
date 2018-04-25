@@ -55,10 +55,7 @@ class ListState extends State<ListPage> {
           itemBuilder: buildView,
           itemCount: data.length,
         ),
-        right: new Container(
-          width: 120.0,
-          child: new Row(
-              children: <Widget>[
+        right: [
                 new GestureDetector(
                   child: new Text('添加'),
                   onTap: _add,
@@ -71,11 +68,10 @@ class ListState extends State<ListPage> {
                   child: new Text('删除'),
                   onTap: _delete,
                 )
-              ]
-          )
-          ),
-        )
-    ;
+              ],
+
+          );
+
   }
 
   @override
