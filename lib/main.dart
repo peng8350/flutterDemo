@@ -1,4 +1,5 @@
 import 'package:fluterdemo/pages/DrawerPage.dart';
+import 'package:fluterdemo/pages/ImagePage.dart';
 import 'package:fluterdemo/pages/RadioPage.dart';
 import 'package:fluterdemo/pages/TabPage.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         "dialog": (BuildContext context) => new DialogPage(),
         "tab": (BuildContext context) => new TabPage(),
         "drawer": (BuildContext context) => new DrawerPage(),
-        "radio": (BuildContext context) => new RadioPage()
+        "radio": (BuildContext context) => new RadioPage(),
+        "image":(BuildContext context) => new ImagePage()
       },
     );
   }
@@ -51,7 +53,8 @@ class MyHomePage extends StatelessWidget {
     {'title': "对话框", 'navigate': 'dialog'},
     {'title': "Tab底部导航", 'navigate': 'tab'},
     {'title': "Drawer+顶部Tab导航", 'navigate': 'drawer'},
-    {'title': "单选+多选", 'navigate': 'radio'}
+    {'title': "单选+多选", 'navigate': 'radio'},
+    {'title': "图片", 'navigate': 'image'}
   ];
 
   Widget getView(BuildContext context, int index) =>
