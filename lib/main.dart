@@ -1,4 +1,5 @@
 import 'package:fluterdemo/pages/DrawerPage.dart';
+import 'package:fluterdemo/pages/RadioPage.dart';
 import 'package:fluterdemo/pages/TabPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         "list": (BuildContext context) => new ListPage(),
         "dialog": (BuildContext context) => new DialogPage(),
         "tab": (BuildContext context) => new TabPage(),
-        "drawer": (BuildContext context) => new DrawerPage()
+        "drawer": (BuildContext context) => new DrawerPage(),
+        "radio": (BuildContext context) => new RadioPage()
       },
     );
   }
@@ -48,7 +50,8 @@ class MyHomePage extends StatelessWidget {
     {'title': "实现ListView添加删除更新操作", 'navigate': 'list'},
     {'title': "对话框", 'navigate': 'dialog'},
     {'title': "Tab底部导航", 'navigate': 'tab'},
-    {'title': "Drawer+顶部Tab导航", 'navigate': 'drawer'}
+    {'title': "Drawer+顶部Tab导航", 'navigate': 'drawer'},
+    {'title': "单选+多选", 'navigate': 'radio'}
   ];
 
   Widget getView(BuildContext context, int index) =>
