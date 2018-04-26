@@ -69,8 +69,7 @@ class HttpState extends State<HttpPage>{
     return new Page(
         title: '网络',
         body:
-        new Column(
-          children: <Widget>[
+
             new ListView(
               shrinkWrap: true,
               children: <Widget>[
@@ -78,11 +77,11 @@ class HttpState extends State<HttpPage>{
                 new FutureBuilder<List<Gank>>(builder: (context,sy){
 
                   return new ListView.builder(
-                    itemCount: 5,
+                    itemCount: sy.data.length,
+                      shrinkWrap:true,
                     itemBuilder: (context,index) =>
                     new ListTile(title:new Text(sy.data[index].desc),subtitle: new Text(sy.data[index].url)),
 
-                    shrinkWrap: true,
                   );
                 },future: getData(),),
                 new Text('使用HttpClient获取'),
@@ -91,9 +90,9 @@ class HttpState extends State<HttpPage>{
                 },itemCount: data2.length,)
               ],
             )
-          ],
-        )
-    );
+
+        );
+
   }
 
 }
