@@ -1,4 +1,5 @@
 import 'package:fluterdemo/pages/DrawerPage.dart';
+import 'package:fluterdemo/pages/ExpandableListPage.dart';
 import 'package:fluterdemo/pages/HttpPage.dart';
 import 'package:fluterdemo/pages/ImagePage.dart';
 import 'package:fluterdemo/pages/InputPage.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         "radio": (BuildContext context) => new RadioPage(),
         "image":(BuildContext context) => new ImagePage(),
         "http": (BuildContext context) => new HttpPage(),
-        "input": (BuildContext context) => new InputPage()
+        "input": (BuildContext context) => new InputPage(),
+        'expandable': (context) => new ExpandableListPage()
       },
     );
   }
@@ -60,7 +62,8 @@ class MyHomePage extends StatelessWidget {
     {'title': "单选+多选", 'navigate': 'radio'},
     {'title': "图片", 'navigate': 'image'},
     {'title': "网络", 'navigate': 'http'},
-    {'title': "输入框", 'navigate': 'input'}
+    {'title': "输入框", 'navigate': 'input'},
+    {'title':'二级列表','navigate':'expandable'}
   ];
 
   Widget getView(BuildContext context, int index) =>
