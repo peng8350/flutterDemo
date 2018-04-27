@@ -29,6 +29,7 @@ class _ExpandableListPageState extends State<ExpandableListPage> {
       children: <Widget>[buildRow(), buildRow(), buildRow()],
       leading: new Icon(Icons.add),
       initiallyExpanded: true,
+
       onExpansionChanged: (isExpand) {},
     ));
   }

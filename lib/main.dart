@@ -1,3 +1,4 @@
+import 'package:fluterdemo/pages/AnimationPage.dart';
 import 'package:fluterdemo/pages/DrawerPage.dart';
 import 'package:fluterdemo/pages/ExpandableListPage.dart';
 import 'package:fluterdemo/pages/HttpPage.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         "image":(BuildContext context) => new ImagePage(),
         "http": (BuildContext context) => new HttpPage(),
         "input": (BuildContext context) => new InputPage(),
-        'expandable': (context) => new ExpandableListPage()
+        'expandable': (context) => new ExpandableListPage(),
+        'animation': (context) => new AnimationPage()
       },
     );
   }
@@ -63,7 +65,8 @@ class MyHomePage extends StatelessWidget {
     {'title': "图片", 'navigate': 'image'},
     {'title': "网络", 'navigate': 'http'},
     {'title': "输入框", 'navigate': 'input'},
-    {'title':'二级列表','navigate':'expandable'}
+    {'title':'二级列表','navigate':'expandable'},
+    {'title':'动画','navigate':'animation'}
   ];
 
   Widget getView(BuildContext context, int index) =>
