@@ -6,7 +6,9 @@ import 'package:fluterdemo/pages/HttpPage.dart';
 import 'package:fluterdemo/pages/ImagePage.dart';
 import 'package:fluterdemo/pages/InputPage.dart';
 import 'package:fluterdemo/pages/RadioPage.dart';
+import 'package:fluterdemo/pages/RefreshPage.dart';
 import 'package:fluterdemo/pages/TabPage.dart';
+import 'package:fluterdemo/pages/TestPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +40,9 @@ class MyApp extends StatelessWidget {
         "input": (BuildContext context) => new InputPage(),
         'expandable': (context) => new ExpandableListPage(),
         'animation': (context) => new AnimationPage(),
-        'flow': (context) => new FlowPage()
+        'flow': (context) => new FlowPage(),
+        'test': (context) => new TestPage(),
+        'refresh': (context) => new RefreshPage()
       },
     );
   }
@@ -69,7 +73,9 @@ class MyHomePage extends StatelessWidget {
     {'title': "输入框", 'navigate': 'input'},
     {'title':'二级列表','navigate':'expandable'},
     {'title':'动画','navigate':'animation'},
-    {'title':'流水','navigate':'flow'}
+    {'title':'流水','navigate':'flow'},
+    {'title':'测试','navigate':'test'},
+    {'title':'下拉刷新','navigate':'refresh'}
   ];
 
   Widget getView(BuildContext context, int index) =>
