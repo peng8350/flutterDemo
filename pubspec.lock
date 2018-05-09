@@ -255,7 +255,7 @@ packages:
       name: pull_to_refresh
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.5"
   quiver:
     dependency: transitive
     description:

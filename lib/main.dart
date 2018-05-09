@@ -9,6 +9,7 @@ import 'package:fluterdemo/pages/RadioPage.dart';
 import 'package:fluterdemo/pages/RefreshPage.dart';
 import 'package:fluterdemo/pages/TabPage.dart';
 import 'package:fluterdemo/pages/TestPage.dart';
+import 'package:fluterdemo/pages/ToastPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,8 @@ class MyApp extends StatelessWidget {
         'animation': (context) => new AnimationPage(),
         'flow': (context) => new FlowPage(),
         'test': (context) => new TestPage(),
-        'refresh': (context) => new RefreshPage()
+        'refresh': (context) => new RefreshPage(),
+        'toast': (context) => new ToastPage()
       },
     );
   }
@@ -75,7 +77,8 @@ class MyHomePage extends StatelessWidget {
     {'title':'动画','navigate':'animation'},
     {'title':'流水','navigate':'flow'},
     {'title':'测试','navigate':'test'},
-    {'title':'下拉刷新','navigate':'refresh'}
+    {'title':'下拉刷新','navigate':'refresh'},
+    {'title':'原生通信','navigate':'toast'}
   ];
 
   Widget getView(BuildContext context, int index) =>

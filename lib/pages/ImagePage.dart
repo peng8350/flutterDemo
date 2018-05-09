@@ -17,7 +17,7 @@ class ImagePage extends StatelessWidget{
       body:new ListView(
         children: <Widget>[
           new Text('普通Image'),
-          new Image.network('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2338002771,1718294115&fm=27&gp=0.jpg'),
+          new Image.network('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2338002771,1718294115&fm=27&gp=0.jpg',scale: 0.001,),
           new Text('FadeInImage'),
           buildFadeIn(),
           new Text('vector-Icon'),
