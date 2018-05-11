@@ -23,16 +23,9 @@ class _TestPageState extends State<TestPage> with TickerProviderStateMixin {
 
     return new Page(
         title: "测试",
-        body: new Stack(
-          overflow: Overflow.visible,
-          children: <Widget>[
-            new Positioned(
-                right: 0.0,
-                top: 150.5,
-                bottom: 11.1,
-                left: 0.0,
-                child: new Container(height: 50.0, color: Colors.green))
-          ],
+        body: new RotatedBox(
+          quarterTurns: 9,
+          child: const Text('Hello World!'),
         ));
   }
 }

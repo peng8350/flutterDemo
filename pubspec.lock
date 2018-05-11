@@ -263,6 +263,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.29.0+1"
+  residemenu:
+    dependency: "direct main"
+    description:
+      name: residemenu
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.0"
   shelf:
     dependency: transitive
     description:

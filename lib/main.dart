@@ -6,7 +6,9 @@ import 'package:fluterdemo/pages/HttpPage.dart';
 import 'package:fluterdemo/pages/ImagePage.dart';
 import 'package:fluterdemo/pages/InputPage.dart';
 import 'package:fluterdemo/pages/RadioPage.dart';
+import 'package:fluterdemo/pages/RefreshIndictorPage.dart';
 import 'package:fluterdemo/pages/RefreshPage.dart';
+import 'package:fluterdemo/pages/ResideMenuPage.dart';
 import 'package:fluterdemo/pages/TabPage.dart';
 import 'package:fluterdemo/pages/TestPage.dart';
 import 'package:fluterdemo/pages/ToastPage.dart';
@@ -44,7 +46,9 @@ class MyApp extends StatelessWidget {
         'flow': (context) => new FlowPage(),
         'test': (context) => new TestPage(),
         'refresh': (context) => new RefreshPage(),
-        'toast': (context) => new ToastPage()
+        'toast': (context) => new ToastPage(),
+        'reside': (context) => new ResideMenuPage(),
+        'indictor': (context) => new IndictorPage()
       },
     );
   }
@@ -78,7 +82,9 @@ class MyHomePage extends StatelessWidget {
     {'title':'流水','navigate':'flow'},
     {'title':'测试','navigate':'test'},
     {'title':'下拉刷新','navigate':'refresh'},
-    {'title':'原生通信','navigate':'toast'}
+    {'title':'原生通信','navigate':'toast'},
+    {'title':'ResideMenu','navigate':'reside'},
+    {'title':'indictor','navigate':'indictor'}
   ];
 
   Widget getView(BuildContext context, int index) =>
